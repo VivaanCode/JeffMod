@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jeffmod",
+  "version": "${version}",
+  "name": "JeffMod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/jeffmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.example.jeffmod.client.MainClient"
+    ],
+    "main": [
+      "org.example.jeffmod.Main"
+    ]
+  },
+  "mixins": [
+    "jeffmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
