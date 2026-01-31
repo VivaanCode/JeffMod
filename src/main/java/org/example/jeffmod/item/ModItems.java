@@ -12,31 +12,26 @@ import org.example.jeffmod.Main;
 
 public class ModItems {
 
-    public static final Item HEALING_BUBBLE = registerItem(
-            "healing_bubble",
-            new Item.Settings()
-    );
+    // Define the Item
+    public static final Item HEALING_BUBBLE = registerItem("healing_bubble");
 
-    private static Item registerItem(String name, Item.Settings settings) {
+    // This helper method creates the item correctly for 1.21
+    private static Item registerItem(String name) {
         Identifier id = Identifier.of(Main.MOD_ID, name);
+        RegistryKey<Item> key = RegistryKey.of(Registries.ITEM.getKey(), id);
 
-        return Registry.register(
-                Registries.ITEM,
-                id,
-                new Item(settings.registryKey(
-                        RegistryKey.of(Registries.ITEM.getKey(), id)
-                ))
-        );
-    }
+        // Create the settings with the key ALREADY attached
+        Item.Settings settings = new Item.Settings().registryKey(key).maxCount(16);
 
-    public static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
-        entries.add(HEALING_BUBBLE);
+        // Create your custom item class
+        HealingBubbleItem item = new HealingBubbleItem(settings);
+
+        return Registry.register(Registries.ITEM, id, item);
     }
 
     public static void registerModItems() {
         Main.LOGGER.info("Registering Mod Items for " + Main.MOD_ID);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
-                .register(ModItems::addItemsToIngredientItemGroup);
+                .register(entries -> entries.add(HEALING_BUBBLE));
     }
 }
