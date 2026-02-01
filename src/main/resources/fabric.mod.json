@@ -13,6 +13,9 @@
     "client": [
       "org.example.jeffmod.client.MainClient"
     ],
+    "fabric-datagen": [
+      "org.example.jeffmod.datagen.ModDataGenerator"
+    ],
     "main": [
       "org.example.jeffmod.Main"
     ]
