@@ -4,6 +4,7 @@
   "package": "org.example.jeffmod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "LivingEntityMixin"
   ],
   "client": [
   ],
