@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
+import org.example.jeffmod.Main;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,7 +25,7 @@ public class ModEnchantmentGenerator extends FabricDynamicRegistryProvider {
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
         RegistryKey<Enchantment> pacifistEnchant = RegistryKey.of(
                 RegistryKeys.ENCHANTMENT,
-                Identifier.of("jeffmod", "pacifist")
+                Identifier.of(Main.MOD_ID, "pacifist")
         );
 
         entries.addAll(registries.getOrThrow(RegistryKeys.ENCHANTMENT));

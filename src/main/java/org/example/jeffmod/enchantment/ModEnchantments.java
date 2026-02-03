@@ -27,8 +27,8 @@ public class ModEnchantments {
                                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                                 5, // weight
                                 1, // max level
-                                Enchantment.leveledCost(30, 1),
-                                Enchantment.leveledCost(30, 1),
+                                Enchantment.leveledCost(5, 8),
+                                Enchantment.leveledCost(5, 8),
                                 30,
                                 AttributeModifierSlot.MAINHAND ))
 
