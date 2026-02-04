@@ -16,7 +16,7 @@ public abstract class LivingEntityMixin {
     @Shadow
     public abstract boolean hasStatusEffect(RegistryEntry<StatusEffect> effect);
 
-    @Inject(method = "addStatusEffect(Lnet/minecraft/entity/effect/StatusEffectInstance;)Z", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "canHaveStatusEffect", at = @At("HEAD"), cancellable = true)
     private void doPurified(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> cir) {
         if (this.hasStatusEffect(ModEffects.PURIFIED_ENTRY)) {
             if (!effect.getEffectType().value().isBeneficial()) {
