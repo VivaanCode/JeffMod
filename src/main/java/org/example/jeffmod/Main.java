@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import org.example.jeffmod.effect.ModEffects;
 import org.example.jeffmod.enchantment.ModEnchantmentEffects;
 import org.example.jeffmod.item.ModItems;
+import org.example.jeffmod.potion.ModPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,6 @@ public class Main implements ModInitializer {
         ModItems.registerModItems();
         ModEnchantmentEffects.registerEnchantmentEffects();
         ModEffects.registerEffects();
+        ModPotions.registerPotions();
     }
 }

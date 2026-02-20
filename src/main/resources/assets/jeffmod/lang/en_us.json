@@ -1,5 +1,9 @@
 {
   "item.jeffmod.healing_bubble": "Healing Bubble",
   "enchantment.jeffmod.pacifist": "Pacifist",
-  "effect.jeffmod.purified": "Purified"
+  "effect.jeffmod.purified": "Purified",
+  "item.minecraft.potion.effect.purified": "Potion of Purification",
+  "item.minecraft.splash_potion.effect.purified": "Splash Potion of Purification",
+  "item.minecraft.lingering_potion.effect.purified": "Lingering Potion of Purification",
+  "item.minecraft.tipped_arrow.effect.purified": "Arrow of Purification"
 }
