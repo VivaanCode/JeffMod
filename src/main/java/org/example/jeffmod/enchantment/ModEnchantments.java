@@ -12,7 +12,6 @@ import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.floatprovider.ConstantFloatProvider;
 import org.example.jeffmod.Main;
-import org.example.jeffmod.enchantment.custom.PacifistEnchantmentEffect;
 
 public class ModEnchantments {
     public static final RegistryKey<Enchantment> PACIFIST =
@@ -32,10 +31,6 @@ public class ModEnchantments {
                                 30,
                                 AttributeModifierSlot.MAINHAND ))
 
-                .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
-                        EnchantmentEffectTarget.ATTACKER,
-                        EnchantmentEffectTarget.VICTIM,
-                        new PacifistEnchantmentEffect())
                 .build(PACIFIST.getValue()));
     }
 
